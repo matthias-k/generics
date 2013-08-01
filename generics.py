@@ -9,6 +9,11 @@ def progressinfo(seq, verbose=True, length=None, prefix=''):
 	   display the progress after each iteration but tries
 	   to approximate adaequate stepsizes in order to print
 	   the progress information roughly ones per second.
+       
+       -verbose: if False, the function behaves like `yield from seq`
+       -length: can be used to give the length of sequences that
+             have no __len__ attribute or to overwrite the length
+       -prefix: Will be printed before the status information.
 	"""
 	if not verbose:
 		for item in seq:
